@@ -1,36 +1,138 @@
-/* static/css/base.css */
+/* styles/base.css */
+
+/* Reset some default styles */
+body, h1, h2, p, a, button, form, input {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General body styling */
 body {
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 18px;
+    background-color: #f9f5f5; /* Very light pinkish-white background */
+    color: #333;
+    line-height: 1.6;
 }
+
+/* Header styling */
 header {
-    border-bottom: 1px solid #999;
-    margin-bottom: 2rem;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #003366; /* Navy blue color for the header */
+    color: white;
 }
-header h1 a {
-    color: red;
+
+.nav-left h1 a {
+    color: white;
+    font-size: 24px;
     text-decoration: none;
 }
-.nav-left {
-    margin-right: auto;
+
+.nav-right a {
+    color: #cce4ff; /* Light blue color for the link */
+    font-size: 16px;
+    border: 1px solid #cce4ff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
-.nav-right {
-    display: flex;
-    padding-top: 2rem;
+
+.nav-right a:hover {
+    background-color: #cce4ff; /* Light blue color for hover effect */
+    color: white;
 }
+
+/* General link styling */
+a {
+    text-decoration: none;
+    color: #007bff; /* Light blue color for links */
+}
+
+a:hover {
+    color: #0056b3; /* Darker blue color for hover effect */
+}
+
+/* Form styling */
+form {
+    background-color: #ffffff; /* White background for forms */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+form input[type="text"], form input[type="password"], form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Button styling */
+button, input[type="submit"] {
+    background-color: #007bff; /* Light blue color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue color for hover effect */
+}
+
+/* Login message styling */
+.login-message {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    color: #003366; /* Dark navy color for text */
+    margin: 20px 0;
+    text-align: center;
+}
+
+.login-message a {
+    color: #007bff; /* Light blue color for link */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.login-message a:hover {
+    color: #0056b3; /* Darker blue color for hover effect */
+}
+
+/* Post entries styling */
 .post-entry {
-    margin-bottom: 2rem;
+    background-color: #ffffff; /* White background for posts */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    padding: 20px;
 }
+
 .post-entry h2 {
-    margin: 0.5rem 0;
+    font-size: 24px;
+    color: #003366; /* Dark navy color for headings */
+    margin-bottom: 10px;
 }
-.post-entry h2 a,
-.post-entry h2 a:visited {
-    color: blue;
-    text-decoration: none;
-}
+
 .post-entry p {
-    margin: 0;
-    font-weight: 400;
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Container for central content */
+.content {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
 }
